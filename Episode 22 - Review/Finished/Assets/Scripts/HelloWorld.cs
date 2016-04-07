@@ -6,8 +6,6 @@ using Jezner.CSharp;
 
 public class HelloWorld : MonoBehaviour {
 	
-	IPersitable playerOne;
-	Alien alien;
 
 	void Start() {
 
@@ -19,9 +17,6 @@ public class HelloWorld : MonoBehaviour {
 		int number = (int) array1[0];
 		number *= 100;
 
-		playerOne = new Player(3, "Barney", 100);
-		alien = new Alien(100, 1, false);
-		playerOne.Save();
 	}
 
 
@@ -29,8 +24,6 @@ public class HelloWorld : MonoBehaviour {
 //		Debug.Log ("Name: " + playerOne.Name + ", Score: " + playerOne.Score
 //		           + ", Lives: " + playerOne.Lives);
 
-		Debug.Log ("Is Alive: " + alien.IsAlive + ", Hit Points: " + 
-		           alien.HitPoints + ", Point Value: " + alien.PointValue);
 
 	}
 

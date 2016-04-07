@@ -1,26 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Jezner.CSharp;
+using Beginning.CSharp;
 
 public class GameManger : MonoBehaviour {
 
 	private IShootable[] enemies = new IShootable[4];
+	private IPersistable[] savedItems = new IPersistable[3];
 	
 	void Start () {
 		Alien alienOne = new Alien();
-		Alien alienTwo = new Alien();
-		Alien alienThree = new Alien();
 		Turret turret = new Turret();
+		Player player = new Player();
 
-		enemies[0] = alienOne;
-		enemies[1] = alienTwo;
-		enemies[2] = alienThree;
-		enemies[3] = turret;
+		savedItems[0] = alienOne;
+		savedItems[1] = turret;
+		savedItems[2] = player;
 	}
 
 	void OnDisable() {
-		foreach (IShootable shootable in enemies) {
-			shootable.Fire();
+		foreach (IPersistable persistable in savedItems) {
+			persistable.Save();
 		}
 	}
 

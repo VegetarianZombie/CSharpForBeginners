@@ -1,10 +1,7 @@
-﻿namespace Beginning.CSharp {
+﻿using UnityEngine;
 
-	public interface IPersitable {
-		void Save();
-	}
-
-	public struct Player : IPersitable {
+namespace Beginning.CSharp {
+	public struct Player : IPersistable {
 
 		private int lives;
 
@@ -19,7 +16,7 @@
 		}
 
 		public void Save() {
-			// Save
+			Debug.Log("Player saves");
 		}
 
 		public int Lives {

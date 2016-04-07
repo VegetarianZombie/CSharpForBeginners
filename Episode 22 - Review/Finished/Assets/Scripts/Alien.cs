@@ -2,7 +2,7 @@
 
 namespace Jezner.CSharp {
 
-	public struct Alien : IShootable { 
+	public struct Alien : IShootable, IPersistable { 
 
 		public int PointValue { get;set; }
 		public int HitPoints { get;set; }
@@ -20,6 +20,10 @@ namespace Jezner.CSharp {
 
 		public void Fire() {
 			Debug.Log("Alien fires");
+		}
+
+		public void Save() {
+			Debug.Log("Alien saves");
 		}
 
 	}

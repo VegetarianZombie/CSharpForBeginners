@@ -1,0 +1,3 @@
+﻿interface IPersistable {
+	void Save();
+}
